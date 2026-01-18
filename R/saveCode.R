@@ -4,6 +4,8 @@ saveCode <- function(last_name){
   #' @param last_name User's last name
   #'
   #' @return Outputs 1 R file and 1 txt file
+  #'
+  #' @export
 
   input_file <- knitr::current_input()
   lines <- readLines(input_file, warn = FALSE)
