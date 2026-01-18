@@ -30,9 +30,11 @@ saveCode <- function(last_name){
     }
   }
 
+  last_name <- toupper(last_name)
+
   base_name <- sub("\\.rmarkdown$", "", input_file)
-  output_file_R <- paste0(base_name, "-", last_name, "-code.R")
-  output_file_txt <- paste0(base_name, "-", last_name, "-code.txt")
+  output_file_R <- paste0(last_name, "-", base_name, "-code.R")
+  output_file_txt <- paste0(last_name, "-", base_name, "-code.txt")
 
   writeLines(code_lines, output_file_R)
   writeLines(code_lines, output_file_txt)
