@@ -1,3 +1,4 @@
+#' @export
 r_to_html <- function(r_file, author = "") {
   #' @export
   
