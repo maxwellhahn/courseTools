@@ -1,4 +1,6 @@
-r_to_html <- function(r_file) {
+r_to_html <- function(r_file, author = "") {
+  #' @export
+  
   # Check for the quarto R package, installing if necessary
   if (!requireNamespace("quarto", quietly = TRUE)) {
     message("Installing the 'quarto' R package...")
@@ -28,6 +30,7 @@ r_to_html <- function(r_file) {
     "---\n",
     "title: \"", r_basename, "\"\n",
     "date: \"", today, "\"\n",
+    "author: \"", author, "\"\n",
     "format:\n",
     "  html:\n",
     "    embed-resources: true\n",
